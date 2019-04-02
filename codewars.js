@@ -280,7 +280,6 @@ isPangram(string);
 // Should return "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11" (as a string)
 
 function alphabetPosition1(text) {
-    let a = new Date().getTime();
     text=text.toUpperCase();
     let result = "";
     for (let i = 0; i<text.length; i++) {
@@ -293,24 +292,17 @@ function alphabetPosition1(text) {
         }
         result += num;
     }
-    var foo=result;
-    console.log((new Date().getTime()) - a);
 }
 
 function alphabetPosition2(text) {
-    let a = new Date().getTime();
-    var foo=text
-        .toUpperCase()
+    text.toUpperCase()
         .match(/[a-z]/gi)
         .map( (c) => c.charCodeAt() - 64)
         .join(' ');
-    console.log((new Date().getTime()) - a);
 }
 
-zzz="Among the, I have never been clear. I am quite sure she never made the slightest effort to make my acquaintance.";
-
-alphabetPosition1(zzz);
-alphabetPosition2(zzz);
+alphabetPosition1("Among the, I have never been clear. I am quite sure she never made the slightest effort to make my acquaintance.");
+alphabetPosition2("Among the, I have never been clear. I am quite sure she never made the slightest effort to make my acquaintance.");
 
 
 //The Western Suburbs Croquet Club has two categories of membership, Senior and Open. They would like your help with an application form that will tell prospective members which category they will be placed.

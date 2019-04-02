@@ -423,3 +423,8 @@ checkCoupon('123','123','September 5, 2014','October 1, 2014');
 //
 // Hint: While it wouldn't take too long to hard code the amount of keypresses for all 26 letters by hand, try to avoid doing so! (Imagine you work at a phone manufacturer who might be testing out different keyboard layouts, and you want to be able to test new ones rapidly.)
 
+function presses(phrase) {
+    // To do...
+}
+
+presses("HOW R U"); // 13, "should work for phrases with spaces"

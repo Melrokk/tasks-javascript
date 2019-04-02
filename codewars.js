@@ -14,7 +14,7 @@ function findShort(s){
 
     return shortestWord;
 }
-console.log(findShort("bitcoin take over the world maybe who knows perhaps"));
+findShort("bitcoin take over the world maybe who knows perhaps");
 
 //#2
 function findShortWord(s) {
@@ -24,7 +24,7 @@ function findShortWord(s) {
         });
     return shortestWord[0].length;
 }
-console.log(findShortWord("bitcoin take over the world maybe who knows perhaps"));
+findShortWord("bitcoin take over the world maybe who knows perhaps");
 
 
 //#3
@@ -41,12 +41,11 @@ function findShortW(s){
 var x = 10, y = -20;
 var z = Math.min(x, y);
 
-console.log(findShortW("bitcoin take over the world maybe who knows perhaps"));
-console.log(z);
+findShortW("bitcoin take over the world maybe who knows perhaps");
 
 
 function JadenCase(str) {
-    console.log(str.split(' ').map(w => w[0].toUpperCase() + w.substring(1)).join(' '));
+    str.split(' ').map(w => w[0].toUpperCase() + w.substring(1)).join(' ');
 }
 JadenCase("bitcoin take over the world maybe who knows perhaps");
 
@@ -62,7 +61,6 @@ makeNegative(0);
 //Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
 var summation = function (num) {
     return num*(num+1)/2
-    // console.log(num*(num+1)/2);
 };
 
 summation(9);
@@ -85,7 +83,7 @@ var number = function(busStops){
     // return busStops.reduce((rem, [on, off]) => rem + on - off, 0); Best solution !!!!!
 };
 
-console.log(number([[3,0],[9,1],[4,8],[12,2],[6,1],[7,8]]));
+number([[3,0],[9,1],[4,8],[12,2],[6,1],[7,8]]);
 
 
 //Complete the square sum method so that it squares each number passed into it and then sums the results together.
@@ -95,7 +93,7 @@ function squareSum(numbers){
     return numbers.reduce((sum, cur) => sum + Math.pow(cur, 2), 0);
 }
 
-console.log(squareSum([0, 3, 4, 5]));
+squareSum([0, 3, 4, 5]);
 
 
 //You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item.
@@ -115,23 +113,18 @@ let sum = function likes(names) {
     let and = ' and ';
     if(names.length > 0) {
         if (names.length === 1) {
-            let str = (names[0] + ' likes this');
-            console.log(str);
+            return names[0] + ' likes this';
         }
         if (names.length === 2) {
-            let str = (names[0] + and + names[1] + likeThis);
-            console.log(str);
+            return names[0] + and + names[1] + likeThis;
         }
         if (names.length === 3) {
-            let str = (names[0] + ', ' + names[1] + and + names[2] + likeThis);
-            console.log(str);
+            return names[0] + ', ' + names[1] + and + names[2] + likeThis;
         }
         if (names.length > 3) {
-            let str =(names[0] + ', ' + names[1] + and + (names.length - 2) + ' others' + likeThis);
-            console.log(str);
+            return (names[0] + ', ' + names[1] + and + (names.length - 2) + ' others' + likeThis);
         }
-        // names.map(name => name[0].toUpperCase() + name.substring(1)).join(' ')
-    } else {console.log(message)}
+    } else {return message}
 };
 
 function likes(names) {
@@ -215,7 +208,7 @@ calculateYears(1000,0.01625,0.18,1200);
 // Note: for this kata y isn't considered a vowel.
 
 function disemvowel(str) {
-    console.log(str.replace(/[aeiou]/gi, ""));
+    str.replace(/[aeiou]/gi, "");
 }
 disemvowel("This website What are y is for losers LOL!");
 
